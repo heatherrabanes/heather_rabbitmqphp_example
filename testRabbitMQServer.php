@@ -7,7 +7,7 @@ require_once('rabbitMQLib.inc');
 function doLogin($username,$password)
 {
     // lookup username in databas
-    // check password
+    // check password TEST TEST
     return true;
     //return false if not valid
 }
@@ -32,7 +32,9 @@ function requestProcessor($request)
 
 $server = new rabbitMQServer("testRabbitMQ.ini","testServer");
 
+echo "testRabbitMQServer BEGIN".PHP_EOL;
 $server->process_requests('requestProcessor');
+echo "testRabbitMQServer END".PHP_EOL;
 exit();
 ?>
 
